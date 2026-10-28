@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrightPath Academy – Learn AI, Code &amp; Design</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">
+    <img src="images/logo.png" alt="Logo">
+    <div class="logo-text">
+    <span class="ai-tech">AI & TECH</span>
+    <span class="academy">Acadamy</span>
+    </div>
+</a>
+    <nav class="menu">
+      <a href="#paths">Learning Paths</a>
+      <a href="#how">How to join</a>
+      <a href="#why">Why us</a>
+      <a href="#enroll">Enquiry</a>
+    </nav>
+    <a class="btn accent" href="#enroll">Enroll now</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="pill">Online • Live mentors • Project based</p>
+        <h1>Build your future in <span class="grad">AI, code &amp; design.</span></h1>
+        <p class="lead">Pick a path for your stage of life, learn by building real projects, and grow into the role you want.</p>
+
+        <div class="search">
+          <input type="search" id="search" maxlength="40" placeholder="Search a course, e.g. Python, React, SEO…" aria-label="Search courses">
+          <a class="btn accent" href="#paths">Browse</a>
+        </div>
+        <ul class="hero-tags">
+          <li>Python</li><li>Full Stack</li><li>Generative AI</li><li>UI/UX</li>
+        </ul>
+      </div>
+      <div class="code" aria-hidden="true">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <pre><span class="c">// your first step</span>
+<span class="k">const</span> learner = {
+  goal: <span class="s">"get job-ready"</span>,
+  path: <span class="s">"pick one below"</span>,
+  mode: <span class="s">"online"</span>
+};
+<span class="k">function </span><span class="f"><b>start</b></span>() {
+  <span class="k">return</span> learner.<span class="f"><b>grow</b></span>();
+}</pre>
+      </div>
+    </div>
+  </section>
+  <section class="stats wrap" aria-label="At a glance">
+    <div><b id="statCourses">0</b><span>Courses</span></div>
+    <div><b id="statPaths">0</b><span>Learning paths</span></div>
+    <div><b id="statRange">–</b><span>Course length</span></div>
+    <div><b>100%</b><span>Online classes</span></div>
+  </section>
+  <section id="paths" class="section">
+    <div class="wrap">
+      <h2>Choose your learning path</h2>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Learner type"></div>
+      <div id="pathSteps" class="pathsteps"></div>
+      <p class="result-note" id="resultNote" role="status"></p>
+      <div id="courseArea"></div>
+    </div>
+  </section>
+  <section id="how" class="section dark">
+    <div class="wrap">
+      <h2>How to join</h2>
+      <ol class="steps">
+        <li><span>1</span><h3>Pick a course</h3><p>Use the search or the tabs to find a path that fits you.</p></li>
+        <li><span>2</span><h3>Send an enquiry</h3><p>Fill the short form and our team will call you back.</p></li>
+        <li><span>3</span><h3>Join a batch</h3><p>Attend live online classes with a mentor.</p></li>
+        <li><span>4</span><h3>Build projects</h3><p>Practise with hands-on work you can show others.</p></li>
+      </ol>
+    </div>
+  </section>
+  <section id="why" class="section">
+    <div class="wrap">
+      <h2>Why learn with us</h2>
+      <div class="feat">
+        <div class="f"><i>🎯</i><h3>Paths for every stage</h3><p>Separate tracks for school students, college students, graduates and working professionals.</p></div>
+        <div class="f"><i>🧑‍💻</i><h3>Learn by doing</h3><p>Every course is built around practice, not just theory.</p></div>
+        <div class="f"><i>🌐</i><h3>Study from anywhere</h3><p>All classes run online, so you can join from home.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="enroll" class="section alt">
+    <div class="wrap narrow">
+      <h2>Get a free call back</h2>
+      <form id="enquiryForm" novalidate>
+        <label>Name<input type="text" id="name" maxlength="60" autocomplete="name" required></label>
+        <label>Email<input type="email" id="email" maxlength="100" autocomplete="email" required></label>
+        <label>Phone (10 digits)<input type="tel" id="phone" maxlength="10" inputmode="numeric" autocomplete="tel" required></label>
+        <label>Course<select id="course" required></select></label>
+        <!-- Honeypot: humans never see it, bots fill it -->
+        <input type="text" id="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn accent" type="submit" id="submitBtn">Send enquiry</button>
+        <p id="msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>© 2026 AI & TECH Academy. All rights reserved.</footer>
+<noscript><p style="padding:20px;text-align:center">Please turn on JavaScript to see the courses.</p></noscript>
+<script type="module" src="script.js"></script>
+</body>
+</html>
